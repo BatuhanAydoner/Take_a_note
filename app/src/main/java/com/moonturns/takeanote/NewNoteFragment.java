@@ -2,11 +2,8 @@ package com.moonturns.takeanote;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -252,8 +248,6 @@ public class NewNoteFragment extends Fragment {
         noteId = message.getNoteId();
         note = message.getNote();
         notePriority = message.getNotePriority();
-
-        Log.e("Error", "onEvent()");
 
         etNote.setText(note);
         checkImgChecks(notePriority);
