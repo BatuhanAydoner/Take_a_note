@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewNoteFragment"
+    android:id="@+id/fragmentNoteContainer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentNoteContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:background="@drawable/save_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Note..."
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/circle_border"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNote" />
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_border"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt3"
+                app:layout_constraintEnd_toStartOf="@+id/txt3"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toEndOf="@+id/txt1"
+                app:layout_constraintTop_toTopOf="@+id/txt1" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="88dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/circle_border"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNote" />
+
+            <ImageView
+                android:id="@+id/imgCheck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="@+id/txt1"
+                app:layout_constraintEnd_toStartOf="@+id/txt1"
+                app:layout_constraintTop_toTopOf="@+id/txt1" />
+
+            <ImageView
+                android:id="@+id/imgCheck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_check"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txt2"
+                app:layout_constraintEnd_toStartOf="@+id/txt2"
+                app:layout_constraintTop_toTopOf="@+id/txt2" />
+
+            <ImageView
+                android:id="@+id/imgCheck3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_check"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txt3"
+                app:layout_constraintEnd_toStartOf="@+id/txt3"
+                app:layout_constraintTop_toTopOf="@+id/txt3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
